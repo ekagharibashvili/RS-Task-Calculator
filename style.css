@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+section{
+    background-image:  linear-gradient(rgba(91, 95, 100, 0.95), rgba(36, 37, 37, 0.9),rgba(32, 32, 32, 0.9));
+    min-height: 100vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.container{
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    opacity: 0.5;
+    box-shadow: 3rem 3rem 4rem rgba(151, 148, 147, 0.5),
+    -3rem -3rem 4rem  rgba(151, 148, 147, 0.5);
+}
+
+.display{
+    background-color: rgb(250, 225, 225);
+    height: 100px;
+    width: 100%;
+    text-align: right;
+    padding: 30px;
+    font-size: 30px;
+    position: relative;
+}
+
+.display-1{
+    opacity: 0.9;
+    font-size: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.temp-result{
+    position: absolute;
+    bottom: 0;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+.all_buttons{
+    color: whitesmoke;
+    display: grid;
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+    background-color: rgb(247, 84, 35);
+}
+
+.button{
+    border: 0.5px solid black;
+    height: 85px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: rgb(73, 66, 66);
+}
+
+
+.number{
+    background-color: rgba(243, 127, 92, 0.6); 
+}
+
+.gray{
+    background-color: rgb(129, 127, 133);
+}
+
+.operation sup {
+    font-size: 1.2rem;
+    margin-top: -1rem;
+    margin-left: 0.3rem;
+}
+
+.equal {
+    background-color: rgba(168, 43, 5, 0.801); 
+}
+
+.oper {
+    font-size: 2.8rem;
+}
