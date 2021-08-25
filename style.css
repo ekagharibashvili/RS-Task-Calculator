@@ -11,7 +11,7 @@ html{
 }
 
 section{
-    background-image:  linear-gradient(rgba(91, 95, 100, 0.95), rgba(36, 37, 37, 0.9),rgba(32, 32, 32, 0.9));
+    background-image:  linear-gradient(rgba(129, 180, 241, 0.95), rgba(98, 151, 151, 0.9),rgba(122, 116, 116, 0.9));
     min-height: 100vh;
     width:100%;
     display: flex;
