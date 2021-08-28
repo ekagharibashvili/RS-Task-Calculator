@@ -6,9 +6,7 @@ const operationEl = document.querySelectorAll(".operation");
 const equalEl = document.querySelector(".equal");
 const clearAllEl = document.querySelector(".all-clear");
 const clearLastEl = document.querySelector(".last-entity-clear");
-const divide = document.querySelector(".divide");
-const expo = document.querySelector(".exponantation");
-console.log(expo);
+const sqrt = document.querySelector(".sqrt");
 let dis1Num = "";
 let dis2Num = "";
 let result = null;
@@ -34,7 +32,11 @@ operationEl.forEach((operation) => {
         const operationName = e.target.innerText;
         if (dis1Num && dis2Num && lastOperation) {
             mathOperation();
-        } else {
+        } else if (lastOperation === "√") {
+            !dis2Num;
+            mathOperation();
+        }
+         else {
             result = parseFloat(dis2Num);
         }
         clearVar(operationName);
@@ -62,8 +64,11 @@ function mathOperation() {
     }
     else if (lastOperation === "^") {
         result = (parseFloat(result) ** parseFloat(dis2Num));
-    } 
-
+    }  
+    else if (lastOperation === "√") {
+        result = Math.sqrt(parseFloat(dis2Num));
+    }  
+   
 }
 // operation();
 
@@ -112,6 +117,9 @@ window.addEventListener("keydown", (e) => {
         clickOperation(e.key);
     } else if (e.key === "*") {
         clickOperation("x");
+    }
+    else if (e.key === "√") {
+        clickOperation("√");
     }
         // console.log(e.key)
      else if (e.key == "Enter" || e.key === "=") {
