@@ -80,6 +80,10 @@ function mathOperation() {
         }
         return result;
     }
+
+    if (result === Infinity) {
+        result = 'Error';
+    }
 }
 // operation();
 
