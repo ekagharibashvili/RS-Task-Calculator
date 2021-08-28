@@ -33,10 +33,11 @@ operationEl.forEach((operation) => {
         if (dis1Num && dis2Num && lastOperation) {
             mathOperation();
         } else if (lastOperation === "√") {
-            !dis1Num;
+            tempResultEl.innerText = result;
+            !dis2Num;
             mathOperation();
         }
-         else {
+        else {
             result = parseFloat(dis2Num);
         }
         clearVar(operationName);
@@ -64,11 +65,21 @@ function mathOperation() {
     }
     else if (lastOperation === "^") {
         result = (parseFloat(result) ** parseFloat(dis2Num));
-    }  
+    }
     else if (lastOperation === "√") {
         result = Math.sqrt(parseFloat(dis2Num));
-    }  
-   
+        tempResultEl.innerText = result;
+
+    }
+    if (result.toString().length > 10) {
+        if (result.toString().includes('.')) {
+            result = Number(result.toString().slice(0, 11));
+        }
+        else {
+            result = Number(result.toString().slice(0, 10));
+        }
+        return result;
+    }
 }
 // operation();
 
@@ -121,8 +132,8 @@ window.addEventListener("keydown", (e) => {
     else if (e.key === "√") {
         clickOperation("√");
     }
-        // console.log(e.key)
-     else if (e.key == "Enter" || e.key === "=") {
+    // console.log(e.key)
+    else if (e.key == "Enter" || e.key === "=") {
         clickEqual();
     }
     // console.log(e.key)
