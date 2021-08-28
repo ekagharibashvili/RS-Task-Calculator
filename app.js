@@ -33,7 +33,7 @@ operationEl.forEach((operation) => {
         if (dis1Num && dis2Num && lastOperation) {
             mathOperation();
         } else if (lastOperation === "√") {
-            !dis2Num;
+            !dis1Num;
             mathOperation();
         }
          else {
