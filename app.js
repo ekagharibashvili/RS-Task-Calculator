@@ -68,8 +68,6 @@ function mathOperation() {
     }
     else if (lastOperation === "√") {
         result = Math.sqrt(parseFloat(dis2Num));
-        tempResultEl.innerText = result;
-
     }
     if (result.toString().length > 10) {
         if (result.toString().includes('.')) {
@@ -80,12 +78,11 @@ function mathOperation() {
         }
         return result;
     }
-
-    if (result === Infinity) {
+    if (result === Infinity || isNaN(result)) {
         result = 'Error';
     }
 }
-// operation();
+
 
 equalEl.addEventListener("click", () => {
     if (!dis2Num || !dis1Num) return;
